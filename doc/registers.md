@@ -40,8 +40,8 @@ Kx uses the FASM assembly which has the following registers which Kx uses:
 |      | rcx    |                               | Counter register. Used in loops and as a general purpose register.                                                |
 |      | rdx    |                               | Data register. Used for I/O operations, multiplication/division results and as a general purpose register.        |
 |      | rbx    |                               | Base register. Used as a pointer to data (base pointer in data segment) and as a general-purpose register.        |
-|      | rsp    | `any*`                        | Stack pointer register (points to the top of the stack). Used for function call management.                       |
-|      | rbp    | `any*`                        | Base pointer register. Used to point to the base of the stack frame and in navigating frame-based data.           |
+|      | rsp    | `ptr`                         | Stack pointer register (points to the top of the stack). Used for function call management.                       |
+|      | rbp    | `ptr`                         | Base pointer register. Used to point to the base of the stack frame and in navigating frame-based data.           |
 |      | rsi    |                               | Source index. Used for string and memory operations (source pointer) and as a general-purpose register.           |
 |      | rdi    |                               | Destination index. Used for string and memory operations (destination pointer) and as a general-purpose register. |
 |      | r8     |                               | General purpose.                                                                                                  |
