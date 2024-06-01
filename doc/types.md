@@ -21,6 +21,15 @@ The Kx type system works on how registers work. Here is a list of all types Kx s
 | `ptr`    | -        | -                                                  | -                                                       | Pointer type depending on the platform. It is an alias to one of the integer types. |
 | `any`    | -        | -                                                  | -                                                       | Any or no type.                                                                     |
 
+## Qualifiers
+
+Qualifiers extend a type. They might change how can it be changed, allocated and used.
+
+| Qualifier | Description                                                              |
+| --------- | ------------------------------------------------------------------------ |
+| `const`   | Marks the value as constant.                                             |
+| `static`  | Allocates the value on the stack. Value has to be known at compile time. |
+
 ## Casting
 
 Any type can be cast to its higher-bit type, meaning you may cast a `u8` to a `u16` with no problem, although,
@@ -40,3 +49,22 @@ Just like in C, Kx has a pointer system, where you can create and dereference po
 -   `type*` - Type: Pointer which holds data of a certain type.
 -   `&var` - Create a pointer pointing to the variable.
 -   `*var` - Dereference the pointer stored in `var`.
+
+## Arrays
+
+You can have fixed-size and dynamic arrays in Kx as follows:
+
+    type var[n] = [
+        ...
+    ];
+
+If `n` is supplied there is a static-size array allocated on the stack. You
+may omit `n` if all values are known at compile time.
+
+If you have something like this:
+
+    type var[] = [
+        ...
+    ];
+
+The array is assumed to be dynamic and values will get filled in at run time, the benifit

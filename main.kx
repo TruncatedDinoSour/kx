@@ -1,0 +1,20 @@
+// This is a comment
+/* So is this */
+
+
+u8 example(void){
+     char *string = "This is a string.\n", 1; // This is a comment, too
+     char *string_one = l"This is a literal string.\n";
+     char32 */* Ignore me */string_two = u"This is an unsized string.\n";
+
+     "multiline
+string"
+
+    /* Let's // ignore me too! */
+
+    keyword _ = b;
+
+    u8 a = 0o1_1 * 0x1_3 / 10 + 0b10;
+    u8 b = 0O0_1 | 0X0_1_3 & 1_0 + -0B_10;
+    return a + b;
+}
